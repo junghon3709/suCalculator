@@ -13,10 +13,6 @@ class App extends Component {
       errorCap: "",
       noMods: "",
       errorMods: "",
-      modsData: [],
-      moduleCode: "",
-      errModuleCode: "",
-      moduleGrade: "A+",
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -71,6 +67,8 @@ class App extends Component {
               <label className="form-title">Grade</label>
            </div>
 
+           <ModuleGradeView></ModuleGradeView>
+           <ModuleGradeView></ModuleGradeView>
            <ModuleGradeView></ModuleGradeView>
 
         </form>

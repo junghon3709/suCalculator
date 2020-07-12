@@ -10,6 +10,7 @@ class ModuleGradeView extends React.Component{
 	      errModuleCode: "",
 	      moduleGrade: "A+",
 	      modsData: [],
+	      error: 'falseStyle'
 	    }
 	this.checkMods = this.checkMods.bind(this)
 	this.handleChange = this.handleChange.bind(this)
@@ -46,11 +47,14 @@ class ModuleGradeView extends React.Component{
 		if(upperValue.length >= 6){
 		if(this.state.modsData.includes(upperValue)){
 		  this.setState({errModuleCode: upperValue + ' is available.'})
+		  this.setState({error: 'falseStyle'})
 		} else {
 		    if(this.checkMods(upperValue)!=false){
 		       this.setState({errModuleCode: 'Did you mean: ' + this.checkMods(upperValue) + '?'} )
+		       this.setState({error: 'errorStyle'})
 		    } else{
 		      this.setState({errModuleCode: upperValue + ' not offered this AY.'})
+		      this.setState({error: 'errorStyle'})
 		    }
 		}
 		} else{
@@ -72,11 +76,14 @@ class ModuleGradeView extends React.Component{
 					<select className="form-control" value={this.state.moduleGrade} onChange={this.handleChange} name="moduleGrade">
 					{gradeCAP_}
 					</select>
-					<p className="form-error">
-						{this.state.errModuleCode}
-					</p>
+				</div>
+				<div className="form-error-module">
+				<p className={this.state.error}>
+				{this.state.errModuleCode}
+				</p>
 				</div>
 			</div>
+
 		)
 	}
 }

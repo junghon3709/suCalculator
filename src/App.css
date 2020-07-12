@@ -86,8 +86,27 @@ form {
 
 .form-error{
   float: right;
-  font-size: 14px;
+  margin-bottom: 0px;
   color: red;
+}
+
+.form-error-module{
+  float: right;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+p{
+  float: right;
+  font-size: 14px;
+}
+
+.errorStyle{
+  color: red;
+}
+
+.falseStyle{
+  color: green;
 }
 
 .module-text-code{
@@ -106,7 +125,6 @@ form {
   display: inline-block;
   width: 48%;
   float: left;
-  margin-bottom: 2%;
   margin-top: 0%;
   padding-top: 0.2%;
 }
@@ -115,17 +133,17 @@ form {
     display: inline-block;
     width: 48%;
     float: right;
-    margin-bottom: 2%;
     margin-top: 0%;
+    height: 5%;
 }
 
 .form-control{
-  display: inline-block;
-  width: 100%;
-  float: left;
-  font-size: 20px;
-  padding: 4px 0px 4px 5px;
-  height: auto;
+    display: inline-block;
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    padding: 4px 0px 4px 5px;
+    height: auto;
   }
 
 /* Only the submit button is matched by this selector,
