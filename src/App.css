@@ -107,6 +107,8 @@ form {
   width: 48%;
   float: left;
   margin-bottom: 2%;
+  margin-top: 0%;
+  padding-top: 0.2%;
 }
 
 .module-grade{
@@ -114,7 +116,17 @@ form {
     width: 48%;
     float: right;
     margin-bottom: 2%;
+    margin-top: 0%;
 }
+
+.form-control{
+  display: inline-block;
+  width: 100%;
+  float: left;
+  font-size: 20px;
+  padding: 4px 0px 4px 5px;
+  height: auto;
+  }
 
 /* Only the submit button is matched by this selector,
    but to be sure you could use an id or class for that button */
